@@ -23,7 +23,8 @@
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tribalknowledgepage.github.io/posts/2021/10/powershell-cheatsheet/</guid>
-      <description>Commonly used PowerShell (PS) commands  Please note that all of the following commands are run from a PowerShell prompt.
+      <description>This cheatsheet will continue to receive updates.
+PowerShell (PS) 101 commands  Please note that all of the following commands are run from a PowerShell prompt.
 Retrieve the PowerShell Version
 $PSVersionTable List help about a cmdlet in a readable format:
 Get-Help &amp;lt;cmdlet&amp;gt; | more List cmdlets which contain the keyword &amp;lsquo;service&amp;rsquo; in them:

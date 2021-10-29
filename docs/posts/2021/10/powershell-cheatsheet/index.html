@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Piyush Verma]">
-<meta name="description" content="Commonly used PowerShell (PS) commands  Please note that all of the following commands are run from a PowerShell prompt.
+<meta name="description" content="This cheatsheet will continue to receive updates.
+PowerShell (PS) 101 commands  Please note that all of the following commands are run from a PowerShell prompt.
 Retrieve the PowerShell Version
 $PSVersionTable List help about a cmdlet in a readable format:
 Get-Help &amp;lt;cmdlet&amp;gt; | more List cmdlets which contain the keyword &amp;lsquo;service&amp;rsquo; in them:
@@ -45,19 +46,21 @@ Get-Command -CommandType Cmdlet | ?{$_.Name -match &amp;#34;service&amp;#34;} Li
 
 
 <meta itemprop="name" content="PowerShell Cheatsheet">
-<meta itemprop="description" content="Commonly used PowerShell (PS) commands  Please note that all of the following commands are run from a PowerShell prompt.
+<meta itemprop="description" content="This cheatsheet will continue to receive updates.
+PowerShell (PS) 101 commands  Please note that all of the following commands are run from a PowerShell prompt.
 Retrieve the PowerShell Version
 $PSVersionTable List help about a cmdlet in a readable format:
 Get-Help &lt;cmdlet&gt; | more List cmdlets which contain the keyword &lsquo;service&rsquo; in them:
 Get-Command -CommandType Cmdlet | ?{$_.Name -match &#34;service&#34;} List available commands in the current PS session and their respective details which contain the keyword &lsquo;command&rsquo; in them:"><meta itemprop="datePublished" content="2021-10-29T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-10-29T00:00:00+00:00" />
-<meta itemprop="wordCount" content="489"><meta itemprop="image" content="https://tribalknowledgepage.github.io/"/>
+<meta itemprop="wordCount" content="625"><meta itemprop="image" content="https://tribalknowledgepage.github.io/"/>
 <meta itemprop="keywords" content="PowerShell,cheatsheet,oneliner,redteam," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tribalknowledgepage.github.io/"/>
 
 <meta name="twitter:title" content="PowerShell Cheatsheet"/>
-<meta name="twitter:description" content="Commonly used PowerShell (PS) commands  Please note that all of the following commands are run from a PowerShell prompt.
+<meta name="twitter:description" content="This cheatsheet will continue to receive updates.
+PowerShell (PS) 101 commands  Please note that all of the following commands are run from a PowerShell prompt.
 Retrieve the PowerShell Version
 $PSVersionTable List help about a cmdlet in a readable format:
 Get-Help &lt;cmdlet&gt; | more List cmdlets which contain the keyword &lsquo;service&rsquo; in them:
@@ -67,7 +70,8 @@ Get-Command -CommandType Cmdlet | ?{$_.Name -match &#34;service&#34;} List avail
 
 
     <meta property="og:title" content="PowerShell Cheatsheet" />
-<meta property="og:description" content="Commonly used PowerShell (PS) commands  Please note that all of the following commands are run from a PowerShell prompt.
+<meta property="og:description" content="This cheatsheet will continue to receive updates.
+PowerShell (PS) 101 commands  Please note that all of the following commands are run from a PowerShell prompt.
 Retrieve the PowerShell Version
 $PSVersionTable List help about a cmdlet in a readable format:
 Get-Help &lt;cmdlet&gt; | more List cmdlets which contain the keyword &lsquo;service&rsquo; in them:
@@ -171,8 +175,8 @@ Get-Command -CommandType Cmdlet | ?{$_.Name -match &#34;service&#34;} List avail
           <div class="toc-title">Table of Contents</div>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#commonly-used-powershell-ps-commands">Commonly used PowerShell (PS) commands</a></li>
-    <li><a href="#tweaks">Tweaks</a></li>
+    <li><a href="#powershell-ps-101-commands">PowerShell (PS) 101 commands</a></li>
+    <li><a href="#handy-tweaks">Handy Tweaks</a></li>
     <li><a href="#one-liners">One-Liners</a>
       <ul>
         <li><a href="#creating-a-firewall-rule-exception-in-windows">Creating a firewall rule exception in Windows:</a></li>
@@ -189,6 +193,14 @@ Get-Command -CommandType Cmdlet | ?{$_.Name -match &#34;service&#34;} List avail
         <li><a href="#over-pass-the-hash">Over pass-the-hash</a></li>
       </ul>
     </li>
+    <li><a href="#playing-with-command-output">Playing with command output</a>
+      <ul>
+        <li><a href="#1-expand-redacted-output">1. Expand redacted output</a></li>
+        <li><a href="#2-using-more-command">2. Using &lsquo;more&rsquo; command</a></li>
+        <li><a href="#3-using--expandproperty">3. Using -ExpandProperty</a></li>
+        <li><a href="#4-exporting-output-in-a-csv-format">4. Exporting output in a CSV format</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </aside>
@@ -197,7 +209,8 @@ Get-Command -CommandType Cmdlet | ?{$_.Name -match &#34;service&#34;} List avail
       
 
       <div class="post-content">
-        <h2 id="commonly-used-powershell-ps-commands">Commonly used PowerShell (PS) commands</h2>
+        <p>This cheatsheet will continue to receive updates.</p>
+<h2 id="powershell-ps-101-commands">PowerShell (PS) 101 commands</h2>
 <hr>
 <p>Please note that all of the following commands are run from a PowerShell prompt.</p>
 <p>Retrieve the PowerShell Version</p>
@@ -216,7 +229,7 @@ Get-Command -CommandType Cmdlet | ?{$_.Name -match &#34;service&#34;} List avail
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -CommandType Cmdlet | ?{$_.Source <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;PKI&#34;</span>}
 </code></pre></div><p>List all commands in a module by running:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -Module &lt;module name&gt;
-</code></pre></div><h2 id="tweaks">Tweaks</h2>
+</code></pre></div><h2 id="handy-tweaks">Handy Tweaks</h2>
 <hr>
 <p>When you launch PowerShell session, it opens in the user&rsquo;s home directory by default. This behavior can be modified so that new PS sessions open in your custom directory. Here is how:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># Check the value of $PROFILE variable.</span>
@@ -288,6 +301,19 @@ schtasks /Run /S dc.contoso.local /TN <span style="color:#e6db74">&#34;UserX&#34
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Invoke-Command -ScriptBlock {whoami;hostname} -ComputerName (Get-Content ..\Output\computers.txt) 2&gt;$null
 </code></pre></div><h3 id="over-pass-the-hash">Over pass-the-hash</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Invoke-Mimikatz -Command <span style="color:#e6db74">&#39;&#34;sekurlsa::pth /user:username /domain:srv.contoso.local /ntlm:NTLMHASH /run:powershell.exe&#34;&#39;</span>
+</code></pre></div><h2 id="playing-with-command-output">Playing with command output</h2>
+<hr>
+<h3 id="1-expand-redacted-output">1. Expand redacted output</h3>
+<p>You might notice that sometimes the output returnmed by PS commands is redacted with &ldquo;&hellip;&rdquo;. This can be corrected by modifying the value of the PS variable - <code>$FormatEnumerationLimit</code> as follows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$FormatEnumerationLimit = -1
+</code></pre></div><h3 id="2-using-more-command">2. Using &lsquo;more&rsquo; command</h3>
+<p>Piping output of a command to <code>more</code> command makes it readable from the first line. This is equivalent to <code> less</code> command in Linux/Unix.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Process | more
+</code></pre></div><h3 id="3-using--expandproperty">3. Using -ExpandProperty</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-CimClass -Namespace root/SecurityCenter2 -MethodName * | select -ExpandProperty CimClassMethods
+</code></pre></div><h3 id="4-exporting-output-in-a-csv-format">4. Exporting output in a CSV format</h3>
+<p>Sometimes (more than we&rsquo;d think) having the output in a CSV file is a blessing. Here is how it can be done using <code>Export-CSV</code> cmdlet.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Date | Select-Object -Property DateTime, Day, DayOfWeek, DayOfYear | Export-Csv -Path .\DateTime.csv -NoTypeInformation
 </code></pre></div>
       </div>
     </article>
@@ -316,7 +342,7 @@ schtasks /Run /S dc.contoso.local /TN <span style="color:#e6db74">&#34;UserX&#34
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        489 Words
+        625 Words
       </p>
 
       <p>

