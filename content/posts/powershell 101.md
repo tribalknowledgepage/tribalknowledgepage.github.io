@@ -12,6 +12,9 @@ toc: true
 images:
 tags:
   - PowerShell
+  - cheatsheet
+  - oneliner
+  - redteam
 weight: 10
 ---
 
