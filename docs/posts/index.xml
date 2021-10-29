@@ -10,19 +10,6 @@
         <atom:link href="https://tribalknowledgepage.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>CompTIA PenTest&#43; PTO-002 Beta exam review</title>
-            <link>https://tribalknowledgepage.github.io/posts/2021/10/comptia-pentest-pto-002-beta-exam-review/</link>
-            <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
-            
-            <guid>https://tribalknowledgepage.github.io/posts/2021/10/comptia-pentest-pto-002-beta-exam-review/</guid>
-            <description>About the exam Exam resources Exam experience </description>
-            <content type="html"><![CDATA[<h2 id="about-the-exam">About the exam</h2>
-<h2 id="exam-resources">Exam resources</h2>
-<h2 id="exam-experience">Exam experience</h2>
-]]></content>
-        </item>
-        
-        <item>
             <title>PowerShell Cheatsheet</title>
             <link>https://tribalknowledgepage.github.io/posts/2021/10/powershell-cheatsheet/</link>
             <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
