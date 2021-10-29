@@ -1,9 +1,9 @@
 +++
 title = "About"
-date = "2014-04-09"
+date = "2021-10-29"
 aliases = ["about-us","about-hugo","contact"]
 [ author ]
-  name = "Hugo Authors"
+  name = "Piyush Verma"
 +++
 
 **Trib·​al knowl·​edge**, a term that describes information known within a group of people but unknown outside of it.
