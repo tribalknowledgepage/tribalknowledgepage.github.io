@@ -11,9 +11,7 @@ draft: false
 toc: true
 images:
 tags:
-  - comptia
-  - penetration testing
-  - pentest 
+  - PowerShell
 weight: 10
 ---
 
