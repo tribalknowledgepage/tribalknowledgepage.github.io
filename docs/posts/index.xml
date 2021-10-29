@@ -1,0 +1,24 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Tribal Knowledge</title>
+        <link>https://tribalknowledgepage.github.io/posts/</link>
+        <description>Recent content in Posts on Tribal Knowledge</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Fri, 29 Oct 2021 15:29:08 -0400</lastBuildDate>
+        <atom:link href="https://tribalknowledgepage.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Testpost</title>
+            <link>https://tribalknowledgepage.github.io/posts/2021/10/testpost/</link>
+            <pubDate>Fri, 29 Oct 2021 15:29:08 -0400</pubDate>
+            
+            <guid>https://tribalknowledgepage.github.io/posts/2021/10/testpost/</guid>
+            <description>Test POST.</description>
+            <content type="html"><![CDATA[<p>Test POST.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
