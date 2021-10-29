@@ -8,7 +8,7 @@ type:
 - posts
 title: PowerShell 101
 draft: false
-toc: true
+toc: false
 images:
 tags:
   - PowerShell
