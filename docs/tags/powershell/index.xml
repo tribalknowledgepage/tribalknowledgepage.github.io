@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PowerShell on Welcome to Tribal Knowledge</title>
+    <link>https://tribalknowledgepage.github.io/tags/powershell/</link>
+    <description>Recent content in PowerShell on Welcome to Tribal Knowledge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tribalknowledgepage.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PowerShell 101</title>
+      <link>https://tribalknowledgepage.github.io/posts/2021/10/powershell-101/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tribalknowledgepage.github.io/posts/2021/10/powershell-101/</guid>
+      <description>Commonly used PowerShell commands:
+Get the PowerShell Version
+$PSVersionTable List help about Get-Help in a readable format:
+Get-Help Get-Help | more List cmdlets which contain the keyword &amp;lsquo;service&amp;rsquo; in them:
+Get-Command -CommandType Cmdlet | ?{$_.Name -match &amp;#34;service&amp;#34;} List all commands and their respective details which contain the keyword &amp;lsquo;command&amp;rsquo; in them:
+Get-Command -CommandType All -ShowCommandInfo | ?{$_.Name -match &amp;#34;command&amp;#34;} Wilcards can be used to match as well. Example:
+Get-Command -CommandType All | ?</description>
+    </item>
+    
+  </channel>
+</rss>
