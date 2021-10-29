@@ -6,18 +6,53 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 29 Oct 2021 15:29:08 -0400</lastBuildDate>
+        <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://tribalknowledgepage.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Testpost</title>
-            <link>https://tribalknowledgepage.github.io/posts/2021/10/testpost/</link>
-            <pubDate>Fri, 29 Oct 2021 15:29:08 -0400</pubDate>
+            <title>CompTIA PenTest&#43; PTO-002 Beta exam review</title>
+            <link>https://tribalknowledgepage.github.io/posts/2021/10/comptia-pentest-pto-002-beta-exam-review/</link>
+            <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://tribalknowledgepage.github.io/posts/2021/10/testpost/</guid>
-            <description>Test POST.</description>
-            <content type="html"><![CDATA[<p>Test POST.</p>
+            <guid>https://tribalknowledgepage.github.io/posts/2021/10/comptia-pentest-pto-002-beta-exam-review/</guid>
+            <description>About the exam Exam resources Exam experience </description>
+            <content type="html"><![CDATA[<h2 id="about-the-exam">About the exam</h2>
+<h2 id="exam-resources">Exam resources</h2>
+<h2 id="exam-experience">Exam experience</h2>
 ]]></content>
+        </item>
+        
+        <item>
+            <title>PowerShell 101</title>
+            <link>https://tribalknowledgepage.github.io/posts/2021/10/powershell-101/</link>
+            <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://tribalknowledgepage.github.io/posts/2021/10/powershell-101/</guid>
+            <description>Commonly used PowerShell commands:
+Get the PowerShell Version
+$PSVersionTable List help about Get-Help in a readable format:
+Get-Help Get-Help | more List cmdlets which contain the keyword &amp;lsquo;service&amp;rsquo; in them:
+Get-Command -CommandType Cmdlet | ?{$_.Name -match &amp;#34;service&amp;#34;} List all commands and their respective details which contain the keyword &amp;lsquo;command&amp;rsquo; in them:
+Get-Command -CommandType All -ShowCommandInfo | ?{$_.Name -match &amp;#34;command&amp;#34;} Wilcards can be used to match as well. Example:
+Get-Command -CommandType All | ?</description>
+            <content type="html"><![CDATA[<p>Commonly used PowerShell commands:</p>
+<p>Get the PowerShell Version</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"> $PSVersionTable 
+</code></pre></div><p>List help about Get-Help in a readable format:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Help Get-Help | more
+</code></pre></div><p>List cmdlets which contain the keyword &lsquo;service&rsquo; in them:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -CommandType Cmdlet | ?{$_.Name <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;service&#34;</span>}
+</code></pre></div><p>List all commands and their respective details which contain the keyword &lsquo;command&rsquo; in them:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -CommandType All -ShowCommandInfo | ?{$_.Name <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;command&#34;</span>}
+</code></pre></div><p>Wilcards can be used to match as well. Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -CommandType All | ?{$_.Name <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;serv*&#34;</span>}
+</code></pre></div><p>Count the number of commands in the output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">(Get-Command -CommandType All | ?{$_.Name <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;command&#34;</span>}).count
+</code></pre></div><p>List all cmdlets with PKI as source</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -CommandType Cmdlet | ?{$_.Source <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;PKI&#34;</span>}
+</code></pre></div><p>List all commands in a module by running:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -Module &lt;module name&gt;
+</code></pre></div>]]></content>
         </item>
         
     </channel>
