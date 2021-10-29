@@ -1,5 +1,5 @@
 baseURL = "https://tribalknowledgepage.github.io/"
-title   = "Tribal Knowledge"
+title   = "Welcome to Tribal Knowledge"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
@@ -61,7 +61,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Cyber security blog posts"
+  homeSubtitle = "Cyber security blog site"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -136,7 +136,7 @@ disableHugoGeneratorInject = false
     # logoCursorDisabled = false
     # Set to a valid CSS color to change the cursor in the logo.
     # logoCursorColor    = "#67a2c9"
-	logoCursorColor    = "#4D4Dff"
+	logoCursorColor    = "#ff6700"
     # Set to a valid CSS time value to change the animation duration, "0s" to disable.
     # logoCursorAnimate  = "2s"
 
@@ -181,7 +181,7 @@ disableHugoGeneratorInject = false
 
 [languages]
   [languages.en]
-    subtitle  = "SS"
+    subtitle  = "Cybersecurity blog site"
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
