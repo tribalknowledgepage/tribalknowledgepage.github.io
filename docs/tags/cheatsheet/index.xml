@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cheatsheet on Welcome to Tribal Knowledge</title>
-    <link>https://tribalknowledge.page/tags/cheatsheet/</link>
+    <link>https://tribalknowledgepage.github.io/tags/cheatsheet/</link>
     <description>Recent content in cheatsheet on Welcome to Tribal Knowledge</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tribalknowledge.page/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tribalknowledgepage.github.io/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PowerShell Cheatsheet</title>
-      <link>https://tribalknowledge.page/posts/2021/10/powershell-cheatsheet/</link>
+      <link>https://tribalknowledgepage.github.io/posts/2021/10/powershell-cheatsheet/</link>
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tribalknowledge.page/posts/2021/10/powershell-cheatsheet/</guid>
+      <guid>https://tribalknowledgepage.github.io/posts/2021/10/powershell-cheatsheet/</guid>
       <description>This cheatsheet will continue to receive updates.
 PowerShell (PS) 101 commands  Please note that all of the following commands are run from a PowerShell prompt.
 Retrieve the PowerShell version
