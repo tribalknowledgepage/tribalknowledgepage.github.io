@@ -17,6 +17,7 @@ tags:
   - redteam
 weight: 10
 ---
+
 {{<image src="https://media.giphy.com/media/8Iv5lqKwKsZ2g/giphy.gif" alt="alt text" width="400" height="180" position="center">}} 
 
 This cheatsheet will continue to receive updates. 
