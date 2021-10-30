@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Welcome to Tribal Knowledge</title>
-    <link>https://tribalknowledgepage.github.io/tags/</link>
+    <link>https://tribalknowledge.page/tags/</link>
     <description>Recent content in Tags on Welcome to Tribal Knowledge</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tribalknowledgepage.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tribalknowledge.page/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cheatsheet</title>
-      <link>https://tribalknowledgepage.github.io/tags/cheatsheet/</link>
+      <link>https://tribalknowledge.page/tags/cheatsheet/</link>
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tribalknowledgepage.github.io/tags/cheatsheet/</guid>
+      <guid>https://tribalknowledge.page/tags/cheatsheet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>oneliner</title>
-      <link>https://tribalknowledgepage.github.io/tags/oneliner/</link>
+      <link>https://tribalknowledge.page/tags/oneliner/</link>
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tribalknowledgepage.github.io/tags/oneliner/</guid>
+      <guid>https://tribalknowledge.page/tags/oneliner/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PowerShell</title>
-      <link>https://tribalknowledgepage.github.io/tags/powershell/</link>
+      <link>https://tribalknowledge.page/tags/powershell/</link>
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tribalknowledgepage.github.io/tags/powershell/</guid>
+      <guid>https://tribalknowledge.page/tags/powershell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>redteam</title>
-      <link>https://tribalknowledgepage.github.io/tags/redteam/</link>
+      <link>https://tribalknowledge.page/tags/redteam/</link>
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tribalknowledgepage.github.io/tags/redteam/</guid>
+      <guid>https://tribalknowledge.page/tags/redteam/</guid>
       <description></description>
     </item>
     
