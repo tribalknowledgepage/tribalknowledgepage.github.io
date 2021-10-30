@@ -10,6 +10,60 @@
         <atom:link href="https://tribalknowledgepage.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>CompTIA PenTest&#43; PTO-002 Beta exam review</title>
+            <link>https://tribalknowledgepage.github.io/posts/2021/10/comptia-pentest-pto-002-beta-exam-review/</link>
+            <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://tribalknowledgepage.github.io/posts/2021/10/comptia-pentest-pto-002-beta-exam-review/</guid>
+            <description>Penetration testing is and has been a hot skill in the market for a while now. Many certification vendors such as Offensive Security, SANS and eLearnSecurity, to name a few, have been providing training and testing candidate&amp;rsquo;s skills by leveraging hands-on exams.
+About the exam  CompTIA is a popular and respected brand in IT certification industry for many years now. Some of the popular certifications offered by CompTIA which you may have heard are A+, Network+ and Security+.</description>
+            <content type="html"><![CDATA[<p>Penetration testing is and has been a hot skill in the market for a while now. Many certification vendors such as Offensive Security, SANS and eLearnSecurity, to name a few, have been providing training and testing candidate&rsquo;s skills by leveraging hands-on exams.</p>
+<h2 id="about-the-exam">About the exam</h2>
+<hr>
+<p>CompTIA is a popular and respected brand in IT certification industry for many years now. Some of the popular certifications offered by CompTIA which you may have heard are A+, Network+ and Security+.</p>
+<p>They launched their first penetration testing specific certification exam titled PenTest+ on July 31, 2018 (which is set to expire on April, 2022 per CompTIA&rsquo;s website) and more recently launched the updated version, <a href="https://www.comptia.org/certifications/pentest">PTO-002</a> on October 28, 2021.</p>
+<p>Priced at $370 USD, the exam asks a maximum of 85 performance-based and multiple-choice questions. The allotted time to take the exam is 165 minutes and a candidate has to score a minimum of 750 (on a scale of 100-900) to pass. Taken from the official website, the exam tests the candidate on the following skills:</p>
+<ul>
+<li>Plan and scope a penetration testing engagement</li>
+<li>Understand legal and compliance requirements</li>
+<li>Perform vulnerability scanning and penetration testing using appropriate tools and
+techniques, and then analyze the results</li>
+<li>Produce a written report containing proposed remediation techniques, effectively
+communicate results to the management team, and provide practical recommendations</li>
+</ul>
+<h2 id="my-impressions">My impressions</h2>
+<hr>
+<p>Popular notion, when it comes to penetration testing, is legally launching attacks on organizations trying to break-in which is right to some extent (depending on the goal) but there is more to a professional penetration test engagement.</p>
+<p>The course and exam certainly covers those aspects in the planning and scoping, legal and ethical requirements, reporting and communication sections which are all equally if not more important than vanilla attacking.</p>
+<p>Earlier this year, I got the opportunity to take the Beta exam for PTO-002 and the results for that were recently declared, just before the official exam launch.</p>
+
+    <img src="/img/pentestplus_cert.png"  alt="alt text"  class="center"   width="550"   height="400"  />
+
+
+<p>Firstly, what impressed me the most about this exam was the quality of questions which did not give away the answers based off of some keywords, rather made sure that you understood the concept discussed in the question and then select an appropriate choice.</p>
+<p>Secondly, it asked questions about the logistics involved in a typical penetration test (covered in the &lsquo;Planning and Scoping&rsquo; section of their syllabus). That level of depth covered is not common to see in other parallel certifications.</p>
+<h2 id="study-resources">Study resources</h2>
+<hr>
+<ol>
+<li>
+<p><a href="https://www.comptia.org/certifications/pentest#exampreparation">Here</a> is what CompTIA recommends for exam preparation.</p>
+</li>
+<li>
+<p>Official study guide is available for pre-order on <a href="https://www.amazon.com/CompTIA-PenTest-Study-Guide-PT0-002/dp/1119823811">Amazon</a>.</p>
+</li>
+<li>
+<p>To gain hands-on experience with attack tools and gain better understanding of the overall testing methodology, try TryHackMe&rsquo;s learning path for <a href="https://tryhackme.com/path/outline/pentestplus">CompTIA PenTest+</a>.</p>
+</li>
+</ol>
+<h2 id="final-thoughts">Final thoughts</h2>
+<hr>
+<p>In the penetration testing domain of certifications, this is a relatively new entry-level certification with potential to grow and being recognized in the industry, compared to other established giants mentioned at the beginning of the post but being CompTIA, this certification is compliant with ISO 17024 standards and approved by the US DoD to meet directive 8140/8570.01-M requirements.</p>
+<p>It is also relatively cheaper than other popular certifications like OSCP, GPEN and eCPPTv2.</p>
+<p>I would recommend this to anyone starting their career as a penetration tester as studying for this exam will definitely give you a better understanding of the elements involved in offering &ldquo;professional&rdquo; penetration testing services because let&rsquo;s accept it, this is more than just launching attacks on a target.</p>
+]]></content>
+        </item>
+        
+        <item>
             <title>PowerShell Cheatsheet</title>
             <link>https://tribalknowledgepage.github.io/posts/2021/10/powershell-cheatsheet/</link>
             <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
