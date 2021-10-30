@@ -30,12 +30,12 @@ Retrieve the PowerShell Version
  $PSVersionTable 
  ```
 
-List help about a cmdlet in a readable format:
+List help about a cmdlet in a readable format
 ```powershell 
 Get-Help <cmdlet> | more
 ```
 
-List cmdlets which contain the keyword 'service' in them:
+List cmdlets which contain the keyword 'service' in them
 ```powershell
 Get-Command -CommandType Cmdlet | ?{$_.Name -match "service"}
 ```
@@ -44,12 +44,12 @@ List available commands in the current PS session and their respective details w
 Get-Command -CommandType All -ShowCommandInfo | ?{$_.Name -match "command"}
 ```
 
-Wilcards can be used to match as well. Example:
+Wildcards can be used to match as well. 
 ```powershell
 Get-Command -CommandType All | ?{$_.Name -match "serv*"}
 ```
 
-Count the number of commands in the output: 
+Count the number of commands in the output 
 ```powershell
 (Get-Command -CommandType All | ?{$_.Name -match "command"}).count
 ```
@@ -59,7 +59,7 @@ List all cmdlets with PKI as source
 Get-Command -CommandType Cmdlet | ?{$_.Source -match "PKI"}
 ```
 
-List all commands in a module by running:
+List all commands in a module by running
 ```powershell
 Get-Command -Module <module name>
 ```
@@ -95,7 +95,7 @@ New-NetFirewallRule -DisplayName 'HTTP-Inbound' -Profile @('Domain', 'Private') 
 New-NetFirewallRule -DisplayName '447-Inbound' -Profile @('Domain', 'Private') -Direction Inbound -Action Allow -Protocol TCP -LocalPort @('447')
 ```
 
-### Downlaod cradles
+### Download cradles
 ```powershell
 # Option 1 - Using IEX (compatible with older versions of PS)
 
@@ -183,7 +183,7 @@ Invoke-Mimikatz -Command '"sekurlsa::pth /user:username /domain:srv.contoso.loca
 
 ### 1. Expand redacted output
 
-You might notice that sometimes the output returnmed by PS commands is redacted with "...". This can be corrected by modifying the value of the PS variable - ```$FormatEnumerationLimit``` as follows.
+You might notice that sometimes the output returned by PS commands is redacted with "...". This can be corrected by modifying the value of the PS variable - ```$FormatEnumerationLimit``` as follows.
 
 ``` powershell
 $FormatEnumerationLimit = -1

