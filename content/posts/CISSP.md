@@ -2,11 +2,11 @@
 author:
   name: "Piyush Verma"
 date: 2021-11-29
-linktitle: How I passed CISSP 2021 CAT exam?
+linktitle: CISSP 2021 CAT exam experience
 type:
 - post
 - posts
-title: How I passed CISSP 2021 CAT exam?
+title: CISSP 2021 CAT exam experience
 tags: 
 - cissp
 toc: true
