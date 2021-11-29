@@ -96,7 +96,7 @@ It said 'Congratulations!' - a moment to celebrate.
 10. Prabh Nair's coffee shots. 
 
 
-## Final Thoughts
+## Final thoughts
 ---
 Here are some departing thoughts.
 
