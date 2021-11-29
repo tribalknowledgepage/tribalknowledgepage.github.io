@@ -118,4 +118,4 @@ It might feel overwhelming at first but if you break it down into smaller chunks
 
 Yes, when you pass the exam you have only 'provisionally' passed the exam. Now, if you have the required experience to be called a CISSP, then step 2 is getting endorsed and step 3 is paying the Annual Maintenance Fee (AMF). If you are yet to acquire the minimum experience now, then you can apply to become an Associate of (ISC)². More details on this will be in the email from (ISC)² following your pass.
 
-> Good luck on your CISSP journey. Cheers!
+> Good luck on your CISSP journey. Cheers!!
