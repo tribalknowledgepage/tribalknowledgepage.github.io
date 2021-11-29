@@ -13,7 +13,7 @@ toc: true
 weight: 10
 ---
 
-Considered to be the gold standard of information security certifications, CISSP has definitely gone through multiple iterations since I first heard about it a decade ago. Having recently taken and passed the CISSP 2021 Computerized Adaptive Testing (CAT) exam, here is my take on it and some [resources]() that may be helpful in your journey. 
+Considered to be the gold standard of information security certifications, CISSP has definitely gone through multiple iterations since I first heard about it a decade ago. Having recently taken and passed the CISSP 2021 Computerized Adaptive Testing (CAT) exam, here is my take on it and some resources that may be helpful in your journey. 
 
 ## About the exam
 ---
